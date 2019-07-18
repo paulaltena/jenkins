@@ -16,8 +16,17 @@ pipeline {
       }
     }
     stage('rien') {
-      steps {
-        sleep 10
+      parallel {
+        stage('rien') {
+          steps {
+            sleep 10
+          }
+        }
+        stage('paul') {
+          steps {
+            sleep 3
+          }
+        }
       }
     }
   }
