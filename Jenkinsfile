@@ -15,5 +15,10 @@ pipeline {
         }
       }
     }
+    stage('rien') {
+      steps {
+        sleep 10
+      }
+    }
   }
 }
